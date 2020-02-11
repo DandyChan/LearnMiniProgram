@@ -1,3 +1,5 @@
 <!--pages/home/home.wxml-->
 <text class="title">连接到关于页面</text>
 <button size="mini">click me~</button>
+
+<view>1. 知识点1</view>
