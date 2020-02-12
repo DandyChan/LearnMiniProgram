@@ -1,3 +1,12 @@
 <!--pages/home/home.wxml-->
-<text class="title">连接到关于页面</text>
-<button size="mini">click me~</button>
+<!-- 1. 小程序的数据绑定: {{var}} -> Mustache -->
+<view>Hello {{name}}</view>
+<view>我的年龄：{{age}}</view>
+
+<!-- 2. 列表展示：wx:for -->
+<view wx:for="{{students}}">{{item.id}}***{{item.name}}</view>
+
+<!-- 3. 事件监听改变data -->
+<view>当前计数：{{counter}}</view>
+<button size="mini" bindtap="handleBtnClick">+</button>
+<button size="mini" bindtap="handleBtnSub">-</button>
