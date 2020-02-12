@@ -3,5 +3,31 @@
 		"pages/home/home",
 		"pages/about/about"
 	],
-	"sitemapLocation": "sitemap65.json"
+	"sitemapLocation": "sitemap.json",
+	"window": {
+		"navigationBarBackgroundColor": "#FF00CC",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "社团帮",
+		"backgroundColor": "#ff5777",
+		"backgroundTextStyle": "light",
+		"enablePullDownRefresh": false
+	},
+
+	"tabBar": {
+		"selectedColor": "#FF00CC",
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"text": "主页",
+				"iconPath": "assets/index.png",
+				"selectedIconPath": "assets/index_active.png"
+			},
+			{
+				"pagePath": "pages/about/about",
+				"text": "关于",
+				"iconPath": "assets/love.png",
+				"selectedIconPath": "assets/love_active.png"
+			}
+		]
+	}
 }
