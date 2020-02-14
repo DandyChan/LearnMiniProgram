@@ -4,7 +4,7 @@
 <view>我的年龄：{{age}}</view>
 
 <!-- 2. 列表展示：wx:for -->
-<view wx:for="{{students}}">{{item.id}}***{{item.name}}</view>
+<view wx:for="{{students}}" wx:key="key">{{item.id}}***{{item.name}}</view>
 
 <!-- 3. 事件监听改变data -->
 <view>当前计数：{{counter}}</view>
@@ -20,3 +20,10 @@
 <!-- 5. 展示用户信息 -->
 <open-data type='userNickName'></open-data>
 <open-data type='userAvatarUrl'></open-data>
+
+<view bindtap="handleViewClick">{{msg}}</view>
+<view bindtap="handleViewClick">{{msg}}</view>
+<view bindtap="handleViewClick">{{msg}}</view>
+<view bindtap="handleViewClick">{{msg}}</view>
+<view bindtap="handleViewClick">{{msg}}</view>
+<view bindtap="handleViewClick">{{msg}}</view>

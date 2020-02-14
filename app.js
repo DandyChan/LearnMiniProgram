@@ -49,7 +49,7 @@ App({
 		
 	},
 
-	//全局常/变量，所有页面通过getApp()获取
+	//全局常/变量，所有页面通过getApp()获取0
 	globalData:{
 		name: 'DandyChanPLA',
 		age: 20
