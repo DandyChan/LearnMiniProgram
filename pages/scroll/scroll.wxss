@@ -1,0 +1,24 @@
+.container1{
+	background: pink;
+	white-space: nowrap;
+}
+
+.item1{
+	width: 100px;
+	height: 100px;
+	background: red;
+	margin: 10px;
+	display: inline-block;
+}
+
+.container2{
+	background: orange;
+	height: 200px;
+	margin-top: 20px;
+}
+
+.item2{
+	height: 100px;
+	background: yellowgreen;
+	margin: 10px;
+}

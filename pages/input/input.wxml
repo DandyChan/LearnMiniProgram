@@ -1,0 +1,23 @@
+<!-- 1. inputd的基本使用 -->
+<input/>
+
+<!-- 2. value: input中的默认值 -->
+<input value="???"/>
+
+<!-- 3. type: 决定键盘类型(文本输入/数字/身份证) -->
+<input type="text" placeholder="文本输入"/>
+<input type="number" placeholder="数字"/>
+<input type="idcard" placeholder="身份证"/>
+<input type="digit" placeholder="数字(带小数点)"/>
+
+<!-- 4. password -->
+<!-- 5. placeholder: 占位文字 -->
+<!-- confirm-type -->
+<input password placeholder="password"/>
+<input password placeholder="password" confirm-type="send"/>
+
+<!-- 6. input绑定事件 -->
+<input bindinput="handleInput"
+			 bindfocus="handleFocus"
+			 bindblur="handleBlur"
+/>

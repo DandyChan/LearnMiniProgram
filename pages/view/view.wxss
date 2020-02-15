@@ -1,0 +1,30 @@
+.box{
+	background: orange;
+}
+
+.viewHover{
+	background: pink;
+	color: white;
+}
+
+.hover-view{
+	background: orange;
+	font-size: 30px;
+}
+
+.box1{
+	background: pink;
+	width: 100px;
+	height: 100px;
+}
+
+.box2{
+	width: 200px;
+	height: 200px;
+	background: blue;
+	margin-top: 20px;
+}
+
+.box2-hover{
+	background: greenyellow;
+}
