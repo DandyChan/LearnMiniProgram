@@ -1,0 +1,7 @@
+.box{
+	font-size: 30px;
+}
+
+.active{
+	color: pink;
+}

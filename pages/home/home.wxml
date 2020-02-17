@@ -1,3 +1,7 @@
 <!--pages/home/home.wxml-->
 <text class="title">连接到关于页面</text>
 <button size="mini">click me~</button>
+
+<import src="../wxml/template.wxml"/>
+
+<template is="contentItem" data="{{btnText: '按钮', content: '哈哈哈'}}"/>
