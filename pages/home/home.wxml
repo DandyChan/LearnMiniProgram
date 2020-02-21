@@ -1,3 +1,57 @@
 <!--pages/home/home.wxml-->
 <text class="title">连接到关于页面</text>
 <button size="mini">click me~</button>
+
+<!-- 1. 自定义组件的基本使用 -->
+<!-- 可以到每个页面的json文件中注册，也可以到app.json作全局注册 -->
+<my-cpn/>
+<cpn1/>
+
+<!-- 2. 自定义组件的样式细节 -->
+<my-style/>
+
+<!-- 3. 给自定义组件传递数据/传递样式 -->
+<my-prop title="哈哈哈" titleclass="red" />
+
+<!-- 4. 组件内部发出事件 -->
+<view>当前计数:{{counter}}</view>
+<my-event bind:increament="handleIncreament" />
+
+<!-- 5. tab-control练习 -->
+<tab-control titles="{{['衣服', '裤子', '鞋子']}}" bind:ItemClick="handleItemClick" />
+
+<!-- 6. 直接选中组件修改数据/调用方法 -->
+<button size="mini" bindtap="handleChangeCpn">修改组件内的数据</button>
+<my-selector id="selector" />
+
+<view>------------------------------------------</view>
+
+<!-- 7. 插槽的使用 -->
+<!-- 7.1 单个插槽的使用 -->
+<my-slot>
+  <button size="mini">我是插入的按钮</button>
+</my-slot>
+
+<my-slot>
+  <text>哈哈哈哈哈哈哈哈哈</text>
+</my-slot>
+
+<my-slot>
+  <slider value="80"></slider>
+</my-slot>
+<view>-----------------------</view>
+
+<!-- 7.2 多个插槽的使用 -->
+<!-- 
+	注意事项
+	1. 给每一个插槽起名字: name属性
+	2. 必须在component对象中添加一个选项: options -> multipleSlots: true
+ -->
+ <button size="mini" bindtap="handleChangeShow">切换显示</button>
+<block wx:if="{{isShow}}">
+  <my-mslot>
+    <text slot="slot3">No.3</text>
+    <button size="mini" slot="slot2">我是插入的按钮</button>
+    <slider slot="slot1" />
+  </my-mslot>
+</block>

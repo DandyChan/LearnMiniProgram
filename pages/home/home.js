@@ -1,66 +1,40 @@
 // pages/home/home.js
 Page({
-
-	/**
-	 * 页面的初始数据
-	 */
-	data: {
-
+	data:{
+		counter: 0,
+		isShow: true
 	},
 
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
-	onLoad: function (options) {
-
+	handleIncreament(event){
+		console.log("========", event)
+		this.setData({
+			counter: this.data.counter + 1
+		})
 	},
 
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {
-
+	handleItemClick(event){
+		console.log("///////", event)
 	},
 
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
-	onShow: function () {
+	handleChangeCpn(){
+		//目的：修改my-selector中的counter
+		//1. 获取组件对象
+		const my_selector = this.selectComponent('#selector') //通过class或id选择
+		console.log(my_selector)
 
+		//2. 通过setData修改组件中的数据（不合理）
+		// my_selector.setData({
+		// 	counter: my_selector.data.counter + 20
+		// })
+
+		//3. 通过方法对数据进行修改
+		//这个是自定义组件中已有方法
+		my_selector.changeCounter(10)
 	},
 
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
-
+	handleChangeShow(){
+		this.setData({
+			isShow: !this.data.isShow
+		})
 	}
 })

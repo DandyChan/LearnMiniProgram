@@ -3,3 +3,7 @@
 	color: red;
 	font-size: 30rpx;
 }
+
+.red{
+	color: red;
+}
