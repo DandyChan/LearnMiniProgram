@@ -1,0 +1,4 @@
+<!--pages/comment/comment.wxml-->
+<text>pages/comment/comment.wxml</text>
+<!-- delta设置返回步数，首先要是navigateBack -->
+<navigator open-type="navigateBack" delta="2">返回首页</navigator>
