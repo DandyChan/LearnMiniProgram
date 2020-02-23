@@ -1,3 +1,23 @@
-<!--pages/home/home.wxml-->
-<text class="title">连接到关于页面</text>
-<button size="mini">click me~</button>
+<!-- 1. 展示轮播图 -->
+<!-- 使用了自定义组件 -->
+<w-swiper list="{{banners}}"/>
+
+<!-- 2. 推荐数据的展示 -->
+<w-recommend recommends="{{recommends}}" bind:imageLoad="handleImageLoad"/>
+
+<!-- 3. 本周流行的展示 -->
+<w-popular/>
+
+<!-- 4. tab-control -->
+<w-tab-control titles="{{titles}}"
+							 bind:tabclick="handleTabClick"
+							 id="tab-control"
+							 class="{{isTabFixed ? 'fixed' : ''}}"/>
+<w-tab-control titles="{{titles}}" wx:if="{{isTabFixed}}"/>							 
+
+<!-- 5. 展示商品数据 -->
+<w-goods goods="{{goods[currentType].list}}"/>
+
+<!-- 6. 回到顶部 -->
+<!-- hidden: 对于自定义的组件是无效的 -->
+<w-backtop wx:if="{{showBackTop}}"/>
